@@ -2,8 +2,8 @@
 var fs = require('fs')
 
 // read ssl certificate
-var privateKey = fs.readFileSync('./key.pem', 'utf8')
-var certificate = fs.readFileSync('./cert.pem', 'utf8')
+var privateKey = fs.readFileSync('./private-key-ca.pem', 'utf8')
+var certificate = fs.readFileSync('./certificate.crt', 'utf8')
 var credentials = { key: privateKey, cert: certificate }
 var https = require('https')
 
